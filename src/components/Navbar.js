@@ -12,22 +12,41 @@ const Navbar = () => {
                     target="__self"
                 >
                     <li>
-                        <img src={mdnLogo} alt="MDN" className="mdn"></img>
+                        <img
+                            src={mdnLogo}
+                            alt="MDN"
+                            className="mdn"
+                            draggable="false"
+                        ></img>
                     </li>
                 </a>
                 <h1>Important HTML Tags</h1>
-                <a href="https://vineethchivukula.github.io/portfolio/" target="__self">
+                <a
+                    href="https://vineethchivukula.github.io/portfolio/"
+                    target="__self"
+                >
                     <li>
                         <img
                             src={vinnyLogo}
                             alt="vinny"
                             className="vinny"
+                            draggable="false"
                         ></img>
                     </li>
                 </a>
-                <li>
-                    <img src={githubLogo} alt="github" className="github"></img>
-                </li>
+                <a
+                    href="https://github.com/VineethChivukula/htmlsnips"
+                    target="__self"
+                >
+                    <li>
+                        <img
+                            src={githubLogo}
+                            alt="github"
+                            className="github"
+                            draggable="false"
+                        ></img>
+                    </li>
+                </a>
             </ul>
         </nav>
     );
