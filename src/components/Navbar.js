@@ -5,10 +5,15 @@ import mdnLogo from "../images/mdnLogo.png";
 import vinnyLogo from "../images/vinnyLogo.png";
 import githubLogo from "../images/githubLogo.png";
 
+import Sidebar from "../components/Sidebar";
+
 const Navbar = () => {
     return (
         <nav className="navbar">
             <ul className="links">
+                <li>
+                    <Sidebar />
+                </li>
                 <li>
                     <Button
                         variant="contained"
