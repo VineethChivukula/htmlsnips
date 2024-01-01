@@ -1,5 +1,5 @@
 import "../styles/navbar.css";
-import { Typography, Button } from "@mui/joy";
+import { Typography, Button, Drawer } from "@mui/joy";
 
 import mdnLogo from "../images/mdnLogo.png";
 import vinnyLogo from "../images/vinnyLogo.png";
@@ -12,26 +12,23 @@ const Navbar = () => {
                 <li>
                     <Button
                         variant="contained"
+                        size="large"
+                        className="mdn"
                         onClick={() => {
                             window.open(
                                 "https://developer.mozilla.org/en-US/docs/Web/HTML"
                             );
                         }}
                     >
-                        <img
-                            src={mdnLogo}
-                            alt="MDN"
-                            className="mdn"
-                            draggable="false"
-                        />
+                        <img src={mdnLogo} alt="MDN" draggable="false" />
                     </Button>
                 </li>
-                <Typography level="h1" id="tit">
-                    Important HTML Tags
-                </Typography>
+                <Typography level="h1">Important HTML Tags</Typography>
                 <li>
                     <Button
                         variant="contained"
+                        size="large"
+                        className="vinny"
                         onClick={() => {
                             window.open(
                                 "https://vineethchivukula.github.io/portfolio/"
@@ -41,7 +38,6 @@ const Navbar = () => {
                         <img
                             src={vinnyLogo}
                             alt="vinny"
-                            className="vinny"
                             draggable="false"
                         ></img>
                     </Button>
@@ -49,6 +45,8 @@ const Navbar = () => {
                 <li>
                     <Button
                         variant="contained"
+                        size="large"
+                        className="github"
                         onClick={() => {
                             window.open(
                                 "https://github.com/VineethChivukula/htmlsnips"
@@ -58,7 +56,6 @@ const Navbar = () => {
                         <img
                             src={githubLogo}
                             alt="github"
-                            className="github"
                             draggable="false"
                         ></img>
                     </Button>
