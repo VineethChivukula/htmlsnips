@@ -6,7 +6,8 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Home from "./Home";
 import Basics from "./Basics";
 
@@ -55,12 +56,16 @@ const Sidebar = () => {
         <div>
             {["left"].map((anchor) => (
                 <React.Fragment key={anchor}>
-                    <Button
-                        onClick={toggle(anchor, true)}
-                        style={{ borderRadius: "40%", height: "60px" }}
-                    >
-                        =
-                    </Button>
+                    <div className="icon">
+                        <FontAwesomeIcon
+                            icon={faBars}
+                            onClick={toggle(anchor, true)}
+                            className="icon"
+                            color="white"
+                            size="2x"
+                        />
+                    </div>
+
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}
