@@ -27,6 +27,17 @@
     height: auto;
 }
 
-.icon {
-    margin-top: 0.2rem;
+.ficon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 12px;
+    height: 30px;
+    width: 30px;
+}
+
+.ficon:hover {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 }

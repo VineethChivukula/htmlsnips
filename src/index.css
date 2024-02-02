@@ -12,3 +12,24 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+
+/* This changes the width of the scrollbar */
+::-webkit-scrollbar {
+    width: 8px; 
+}
+
+/* This changes the background color of the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #17181c;
+}
+
+/* This changes the color of the scrollbar thumb (the part you drag) */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+}
+
+/* This changes the color of the scrollbar thumb when you hover over it */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

@@ -56,11 +56,11 @@ const Sidebar = () => {
         <div>
             {["left"].map((anchor) => (
                 <React.Fragment key={anchor}>
-                    <div className="icon">
+                    <div>
                         <FontAwesomeIcon
                             icon={faBars}
                             onClick={toggle(anchor, true)}
-                            className="icon"
+                            className="ficon"
                             color="white"
                             size="2x"
                         />
