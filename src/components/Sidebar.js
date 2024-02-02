@@ -8,6 +8,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import Home from "./Home";
+import Basics from "./Basics";
 
 const Sidebar = () => {
     const [state, setState] = useState(false);
@@ -35,7 +36,7 @@ const Sidebar = () => {
                 onKeyDown={toggle(anchor, false)}
             >
                 <List style={{ color: "#f6f7f9" }}>
-                    {[{ text: "Home", component: Home }].map(
+                    {[{ text: "Home", component: Home }, { text: "Basics", component: Basics }].map(
                         ({ text, component }) => (
                             <ListItem key={text} disablePadding>
                                 <ListItemButton

@@ -7,6 +7,7 @@ import {
 import { Divider } from "@mui/joy";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Basics from "./components/Basics";
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                     <Route path="/Home" element={<Home />} />
                     <Route path="/" element={<Navigate to="/Home" />} />
                     {/* other routes */}
+                    <Route path="/Basics" element={<Basics />} />
                 </Routes>
             </div>
         </Router>
