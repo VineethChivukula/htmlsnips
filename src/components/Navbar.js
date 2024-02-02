@@ -5,7 +5,7 @@ import mdnLogo from "../images/mdnLogo.png";
 import vinnyLogo from "../images/vinnyLogo.png";
 import githubLogo from "../images/githubLogo.png";
 
-import Sidebar from "../components/Sidebar";
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
     return (

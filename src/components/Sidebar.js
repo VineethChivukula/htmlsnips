@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -6,6 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
+import { Home } from "./Home";
 
 const Sidebar = () => {
     const [state, setState] = useState(false);
@@ -33,39 +35,54 @@ const Sidebar = () => {
                 onKeyDown={toggle(anchor, false)}
             >
                 <List style={{ color: "#f6f7f9" }}>
-                    {["Home", "Basics", "Basics", "Basics"].map((text) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton>
-                                <ListItemText primary={text} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
+                    {[{ text: "Home", component: Home }].map(
+                        ({ text, component }) => (
+                            <ListItem key={text} disablePadding>
+                                <ListItemButton
+                                    component={Link}
+                                    to={`/${text}`}
+                                >
+                                    <ListItemText primary={text} />
+                                </ListItemButton>
+                            </ListItem>
+                        )
+                    )}
                 </List>
             </Box>
         );
     };
 
     return (
-        <div>
-            {["left"].map((anchor) => (
-                <React.Fragment key={anchor}>
-                    <Button
-                        onClick={toggle(anchor, true)}
-                        style={{ borderRadius: "40%", height: "60px" }}
-                    >
-                        =
-                    </Button>
-                    <Drawer
-                        anchor={anchor}
-                        open={state[anchor]}
-                        onClose={toggle(anchor, false)}
-                        PaperProps={{ style: { backgroundColor: "#1e1e1e" } }}
-                    >
-                        {list(anchor)}
-                    </Drawer>
-                </React.Fragment>
-            ))}
-        </div>
+        <Router>
+            <div>
+                {["left"].map((anchor) => (
+                    <React.Fragment key={anchor}>
+                        <Button
+                            onClick={toggle(anchor, true)}
+                            style={{ borderRadius: "40%", height: "60px" }}
+                        >
+                            =
+                        </Button>
+                        <Drawer
+                            anchor={anchor}
+                            open={state[anchor]}
+                            onClose={toggle(anchor, false)}
+                            PaperProps={{
+                                style: { backgroundColor: "#1e1e1e" },
+                            }}
+                        >
+                            {list(anchor)}
+                        </Drawer>
+                    </React.Fragment>
+                ))}
+            </div>
+            <Routes>
+                <Route path="/Home" component={Home} />
+                {/* <Route path="/Basics" component={Basics} /> */}
+                {/* <Route path="/Basics_1" component={Basics_1} /> */}
+                {/* <Route path="/Basics_2" component={Basics_2} /> */}
+            </Routes>
+        </Router>
     );
 };
 
