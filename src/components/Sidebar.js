@@ -36,18 +36,16 @@ const Sidebar = () => {
                 onKeyDown={toggle(anchor, false)}
             >
                 <List style={{ color: "#f6f7f9" }}>
-                    {[{ text: "Home", component: Home }, { text: "Basics", component: Basics }].map(
-                        ({ text, component }) => (
-                            <ListItem key={text} disablePadding>
-                                <ListItemButton
-                                    component={Link}
-                                    to={`/${text}`}
-                                >
-                                    <ListItemText primary={text} />
-                                </ListItemButton>
-                            </ListItem>
-                        )
-                    )}
+                    {[
+                        { text: "Home", component: Home },
+                        { text: "Basics", component: Basics },
+                    ].map(({ text, component }) => (
+                        <ListItem key={text} disablePadding>
+                            <ListItemButton component={Link} to={`/${text}`}>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
                 </List>
             </Box>
         );
@@ -68,7 +66,7 @@ const Sidebar = () => {
                         open={state[anchor]}
                         onClose={toggle(anchor, false)}
                         PaperProps={{
-                            style: { backgroundColor: "#1e1e1e" },
+                            style: { backgroundColor: "#101418" },
                         }}
                     >
                         {list(anchor)}

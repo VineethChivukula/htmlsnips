@@ -1,7 +1,11 @@
+import "../styles/home.css";
+
 const Home = () => {
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="home">
+            <h1>Welcome to our website!</h1>
+            <p>We hope you enjoy your visit.</p>
+            
         </div>
     );
 };
