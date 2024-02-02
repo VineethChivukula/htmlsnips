@@ -7,7 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
-import { Home } from "./Home";
+import Home from "./Home";
 
 const Sidebar = () => {
     const [state, setState] = useState(false);
