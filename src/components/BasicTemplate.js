@@ -7,7 +7,6 @@ const BasicTemplate = () => {
             <h1>The Basic HTML Template</h1>
             <CodeMirror
                 width="30%"
-                // theme={"ayu-dark"}
                 value={`<!DOCTYPE html>
 <html>
     <head>
