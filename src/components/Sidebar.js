@@ -9,7 +9,7 @@ import Drawer from "@mui/material/Drawer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Home from "./Home";
-import Basics from "./Basics";
+import BasicTemplate from "./BasicTemplate";
 
 const Sidebar = () => {
     const [state, setState] = useState(false);
@@ -39,14 +39,22 @@ const Sidebar = () => {
                 <List style={{ color: "#f6f7f9" }}>
                     {[
                         { text: "Home", component: Home },
-                        { text: "Basics", component: Basics },
-                    ].map(({ text, component }) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton component={Link} to={`/${text}`}>
-                                <ListItemText primary={text} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
+                        {
+                            text: "BasicTemplate",
+                            component: BasicTemplate,
+                        },
+                    ].map(({ text, component }) => {
+                        return (
+                            <ListItem key={text} disablePadding>
+                                <ListItemButton
+                                    component={Link}
+                                    to={`/${text}`}
+                                >
+                                    <ListItemText primary={text} />
+                                </ListItemButton>
+                            </ListItem>
+                        );
+                    })}
                 </List>
             </Box>
         );

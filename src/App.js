@@ -4,9 +4,10 @@ import {
     Route,
     Navigate,
 } from "react-router-dom";
+import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Basics from "./components/Basics";
+import BasicTemplate from "./components/BasicTemplate";
 
 const App = () => {
     return (
@@ -17,7 +18,7 @@ const App = () => {
                     <Route path="/Home" element={<Home />} />
                     <Route path="/" element={<Navigate to="/Home" />} />
                     {/* other routes */}
-                    <Route path="/Basics" element={<Basics />} />
+                    <Route path="/BasicTemplate" element={<BasicTemplate />} />
                 </Routes>
             </div>
         </Router>
