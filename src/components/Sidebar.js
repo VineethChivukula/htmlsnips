@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -53,36 +53,28 @@ const Sidebar = () => {
     };
 
     return (
-        <Router>
-            <div>
-                {["left"].map((anchor) => (
-                    <React.Fragment key={anchor}>
-                        <Button
-                            onClick={toggle(anchor, true)}
-                            style={{ borderRadius: "40%", height: "60px" }}
-                        >
-                            =
-                        </Button>
-                        <Drawer
-                            anchor={anchor}
-                            open={state[anchor]}
-                            onClose={toggle(anchor, false)}
-                            PaperProps={{
-                                style: { backgroundColor: "#1e1e1e" },
-                            }}
-                        >
-                            {list(anchor)}
-                        </Drawer>
-                    </React.Fragment>
-                ))}
-            </div>
-            <Routes>
-                <Route path="/Home" component={Home} />
-                {/* <Route path="/Basics" component={Basics} /> */}
-                {/* <Route path="/Basics_1" component={Basics_1} /> */}
-                {/* <Route path="/Basics_2" component={Basics_2} /> */}
-            </Routes>
-        </Router>
+        <div>
+            {["left"].map((anchor) => (
+                <React.Fragment key={anchor}>
+                    <Button
+                        onClick={toggle(anchor, true)}
+                        style={{ borderRadius: "40%", height: "60px" }}
+                    >
+                        =
+                    </Button>
+                    <Drawer
+                        anchor={anchor}
+                        open={state[anchor]}
+                        onClose={toggle(anchor, false)}
+                        PaperProps={{
+                            style: { backgroundColor: "#1e1e1e" },
+                        }}
+                    >
+                        {list(anchor)}
+                    </Drawer>
+                </React.Fragment>
+            ))}
+        </div>
     );
 };
 
