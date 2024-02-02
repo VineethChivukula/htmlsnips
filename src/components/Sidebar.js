@@ -32,8 +32,8 @@ const Sidebar = () => {
                 onClick={toggle(anchor, false)}
                 onKeyDown={toggle(anchor, false)}
             >
-                <List>
-                    {["Basics", "Basics", "Basics", "Basics"].map((text) => (
+                <List style={{ color: "#f6f7f9" }}>
+                    {["Home", "Basics", "Basics", "Basics"].map((text) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton>
                                 <ListItemText primary={text} />
@@ -51,7 +51,7 @@ const Sidebar = () => {
                 <React.Fragment key={anchor}>
                     <Button
                         onClick={toggle(anchor, true)}
-                        style={{ borderRadius: "50%", height: "60px" }}
+                        style={{ borderRadius: "40%", height: "60px" }}
                     >
                         =
                     </Button>
@@ -59,6 +59,7 @@ const Sidebar = () => {
                         anchor={anchor}
                         open={state[anchor]}
                         onClose={toggle(anchor, false)}
+                        PaperProps={{ style: { backgroundColor: "#1e1e1e" } }}
                     >
                         {list(anchor)}
                     </Drawer>

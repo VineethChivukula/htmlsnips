@@ -1,5 +1,3 @@
-import "./App.css";
-
 import Navbar from "./components/Navbar";
 
 import { Divider } from "@mui/joy";
