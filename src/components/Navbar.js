@@ -28,7 +28,7 @@ const Navbar = () => {
                         <img src={mdnLogo} alt="MDN" draggable="false" />
                     </Button>
                 </li>
-                <Typography level="h1">Important HTML Tags</Typography>
+                <Typography level="h1">HTML docs</Typography>
                 <li>
                     <Button
                         variant="contained"
